@@ -1,0 +1,182 @@
+@charset "utf-8";
+
+/* 基礎 */
+
+* {
+    /*デフォルトの余白を無し*/
+    margin: 0;
+    padding: 0;
+}
+
+/*背景指定
+------------------------------------------------*/
+body {
+    background-image: url(../img/festive-rose.jpg); /*背景画像*/
+    background-attachment: fixed; /*背景画像をスクロールしない*/
+    font-family: "Sawarabi Gothic", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif; /*書いてある順番で対応しているフォントが適用される*/
+    font-weight: 500; /*フォントの太さ、だいたい中くらい*/
+}
+
+/*wrapper
+------------------------------------------------*/
+.wrapper {
+    /*本体紫部分*/
+    width: 700px; /*本体紫幅*/
+    height: auto; /*本体紫幅*/
+    background-color: rgba(148, 0, 211, 0.3); /*本体色*/
+    margin: 0 auto; /*上下余白無し、左右センター*/
+    padding: 15px 50px; /*内部余白、上下15px 左右50px*/
+}
+
+/* 見出し
+------------------------------------------------*/
+header { /*タイトル題字部分・現在未設定*/
+  width: 670px; /*タイトル部分幅*/
+  margin: 15px; /*タイトル部分外部余白*/
+  background-color: #f2e5ff; /*枠内の色*/
+  border-radius: 30px; /*角を半径30pxで丸く*/
+  box-shadow: 0 0 5px 5px #ffe5ff; /*枠の影、5pxの長さで5px広がる*/
+}
+
+/*ナビゲーションの装飾
+------------------------------------------------*/
+nav {
+    width: 670px; /*ナビゲーション全体幅*/
+    margin: 0 auto; /*上下余白無し、左右センター*/
+}
+
+nav ul li {
+    float: left; /*項目を横に並べる*/
+    width: 140px; /*ナビゲーション1つ体幅*/
+    margin: 10px 12px 10px; /*外部余白、上下10px、左右12px*/
+    list-style-type: none; /*リストの点を取る*/
+    text-decoration: none; /*リンクの下線を取る*/
+}
+
+nav ul li a {
+    display: block; /*文字を箱にする*/
+    text-align: center; /*箱の中で文字をセンターに*/
+    line-height: 2em; /*箱の高さを2文字分*/
+    color: rgba(199, 21, 133); /*文字の色*/
+    background-color: #f2e5ff; /*箱の色*/
+    text-decoration: none; /*リンクの下線を取る*/
+    transition-duration: 0.7s; /*0.7秒掛けて色が変わる*/
+    border-radius: 30px; /*角を半径30pxで丸く*/
+    box-shadow: 0 0 5px 5px #f2e5ff; /*箱の影、5pxの長さで5px広がる*/
+}
+
+nav ul li a:hover {
+    background-color:#ffcccc; /*ボタンの変わる色*/
+}
+
+/*サイトタイトル題字
+------------------------------------------------*/
+h1 {
+    font-size: 250%; /*通常の大きさより250%大きく*/
+    color: #f0f8ff; /*タイトル色*/
+    padding: 10px 10px 0; /*内部余白を上10px左右10px下0px*/
+    text-shadow: 0px 0px 20px #ff6347; /*文字の影、20px広がる*/
+    text-decoration: underline #fa8072; /*文字の下線*/
+}
+
+/*サイトサブタイトル
+------------------------------------------------*/
+h2 {
+    color: #2b2b2b; /*文字色*/
+    padding: 0 15px 10px; /*内部余白を、上0px、左右15px、下10px*/
+}
+
+/*各タイトル題字
+------------------------------------------------*/
+h3 {
+    color: #fa8072; /*文字色*/
+}
+
+em {
+    font-style: normal; /*文字の斜体打ち消し*/
+}
+
+/*各セクションの設定
+------------------------------------------------*/
+section { /*sectionと名前のついた箱の設定*/
+    margin: 10px; /*箱の外部余白10px*/
+    padding: 20px; /*箱の内部余白20px*/
+    background-color: #f2e5ff; /*箱の色*/
+    border-radius: 30px; /*角を半径30pxで丸く*/
+    box-shadow: 0 0 5px 5px #ffe5ff; /*箱の影、5pxの長さで5px広がる*/
+}
+
+/*フッター設定
+------------------------------------------------*/
+footer { /*サイトの下、コピーライトなどの枠*/
+    margin: 10px; /*箱の外部余白10px*/
+    padding: 20px; /*箱の内部余白20px*/
+    background-color: #f2e5ff; /*箱の色*/
+    border-radius: 30px; /*角を半径30pxで丸く*/
+    box-shadow: 0 0 5px 5px #ffe5ff; /*箱の影、5pxの長さで5px広がる*/
+}
+
+/* スクロールボックス
+------------------------------------------------*/
+.infbox {
+    overflow: auto; /*自動でスクロールバーが出る*/
+    width: 600px; /*ボックスの幅600px*/
+    height: 100px; /*ボックスの高さ100px*/
+    margin: 0 auto; /*外部余白、上下無し、左右センター*/
+    background-color: #f9f4ff; /*ボックスの背景色*/
+}
+
+/*clearfix/サイトレイアウト設定
+------------------------------------------------*/
+
+.clearfix:after { /*ナビゲーションを横に並べる設定*/
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*小説リストページ設定
+------------------------------------------------*/
+
+.long ul {
+    list-style-type: none; /*リストの点を取る*/
+}
+
+.long ul li a {
+    text-decoration: none; /*リンクの下線を取る*/
+    color: rgba(199, 21, 133); /*文字色*/
+}
+
+dl dt a {
+    text-decoration: none; /*リンクの下線を取る*/
+    color: rgba(199, 21, 133); /*文字色*/
+}
+
+.honbun {
+    line-height: 2em;
+}
+
+.back a {
+    text-decoration: none; /*リンクの下線を取る*/
+    color: rgba(199, 21, 133); /*文字色*/
+}
+
+
+/*
+
+　　 _,,....,,_ _
+-''":::::::::::::::::｀' 、
+ヽ:::::::::::::::::::::::::::::＼
+　|::::::;ノ´￣＼:::::::::::＼_,. -‐ｧ
+　|::::ﾉ　　　ヽ､ヽr-r'"´　　（.__
+_,.!イ_　　_,.ﾍｰｧ'二ﾊ二ヽ､へ,_7
+::::::rｰ''7ｺ-‐'"´　 　 ;　 ',　｀ヽ/｀7
+r-'ｧ'"´/　 /!　ﾊ 　ハ　 !　　iヾ_ﾉ
+!イ´ ,' |　/__,.!/　V　､!__ﾊ　 ,'　,ゝ
+`! 　!/ﾚi'　(ﾋ_] 　　 　ﾋ_ﾝ ﾚ'i　ﾉ　　　＿人人人人人人人人人人人人人人人＿
+,'　 ﾉ 　 !'"　 　 ,＿__,　 "' i .ﾚ'　　　　＞ゆっくりしていってね！！！＜
+　（　　,ﾊ　　　　ヽ _ﾝ　 　人!　　　　 ￣^Ｙ^Ｙ^Ｙ^Ｙ^Ｙ^Ｙ^Ｙ^Ｙ^Ｙ^Ｙ^Ｙ
+,.ﾍ,）､　　）＞,､ _____,　,.イ　 ハ
+
+*/
+
