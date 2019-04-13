@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+/*ボックス全体*/
+.accbox {
+    margin: 0;
+    padding: 0;
+    width: 1280px;/*最大幅*/
+   height: auto;
+}
+
+/*ラベル*/
+.accbox label {
+    display: block;
+    color :#2f8fcf;
+    font-weight: bold;
+    background :#a4cbf3;
+    cursor :pointer;
+    transition: all 0.5s;
+}
+
+/*ラベルホバー時*/
+.accbox label:hover {
+    background :#85baef;
+}
+
+/*チェックは隠す*/
+.accbox input {
+    display: none;
+}
+
+/*中身を非表示にしておく*/
+.accbox .accshow {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+/*    transition: 0.8s;*/
+}
+
+
+/*クリックで中身表示*/
+.cssacc:checked + .accshow {
+    height: auto;
+/*  padding: 5px;*/
+    background-color: aquamarine;
+    opacity: 1;
+}
+
+/*.more {
+  width: 1280px;
+  height: 50px;
+}*/
+
+.more1 {
+  height: 50px;
+  font-size: 2em;
+  text-align: center;
+  font-family: "HG明朝E", "ＭＳ Ｐ明朝", "ヒラギノ明朝";
+  background-color: coral;
+}
